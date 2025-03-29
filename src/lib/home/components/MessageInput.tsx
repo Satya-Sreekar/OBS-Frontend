@@ -31,10 +31,17 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend }) => {
   };
 
   // Handle audio recording completion
-  const handleAudioRecordingComplete = (blob: Blob) => {
+  const handleAudioRecordingComplete = (blob: Blob, transcript: string) => {
     const audioFile = new File([blob], "audio.wav", { type: "audio/wav" });
-    setFile(audioFile); // Set the audio file as the file to send
+    setFile(audioFile);
+    setMessage(transcript); // Update text input with the transcribed text
   };
+
+  // Update transcript in real time
+  const handleTranscriptUpdate = (transcript: string) => {
+    setMessage(transcript); // Update input field as speech is transcribed
+  };
+
 
   // Toggle recording state
   const toggleRecording = () => {
@@ -75,9 +82,12 @@ const MessageInput: React.FC<MessageInputProps> = ({ onSend }) => {
 
       {/* Audio Recorder Component */}
       <div className="flex items-center space-x-2">
-        {/* <AudioRecorder onRecordingComplete={handleAudioRecordingComplete} /> */}
+        <AudioRecorder
+          onRecordingComplete={handleAudioRecordingComplete}
+          onTranscriptUpdate={handleTranscriptUpdate} // Live transcript updates
+        />
         {/* <Dictaphone/> */}
-        <VoiceToText/>
+        {/* <VoiceToText/> */}
         {isRecording && <p className="text-gray-500">Recording...</p>}
       </div>
     </div>
