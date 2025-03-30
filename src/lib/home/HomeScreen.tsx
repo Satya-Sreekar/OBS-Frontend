@@ -6,6 +6,7 @@ import ChatFooter from "./components/ChatFooter";
 import NavHeader from "./components/NavHeader";
 import AppointmentSection from "./appointments_section/appointment_section_main";
 import Suggesstions from "./components/suggesstions";
+import Suggestions from "./components/suggesstions";
 
 
 const ChatInterface: React.FC = () => {
@@ -19,6 +20,7 @@ const ChatInterface: React.FC = () => {
   };
 
 
+
   return (
     <div className="">
       <NavHeader />
@@ -28,7 +30,7 @@ const ChatInterface: React.FC = () => {
         <div className="flex-grow">
           <MessageInput onSend={handleSendMessage} />
         </div>
-        <Suggesstions />
+       
         <AppointmentSection />
         <ChatFooter />
       </div>

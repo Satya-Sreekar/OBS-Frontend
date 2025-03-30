@@ -9,21 +9,25 @@ const tasks = [
     "Create new patient record",
 ];
 
-const Suggesstions: React.FC = () => {
+interface SuggestionsProps {
+    onSuggestionClick: (task: string) => void;
+}
+
+const Suggestions: React.FC<SuggestionsProps> = ({ onSuggestionClick }) => {
     return (
         <div className="flex flex-wrap gap-4 p-8 w-220 justify-center">
             {tasks.map((task, index) => (
                 <button
-                    style={{ backgroundColor: "transparent", borderRadius: "16px", }}
+                    style={{ backgroundColor: "transparent", borderRadius: "16px" }}
                     key={index}
-                    className="flex items-center justify-center  h-8 text-gray-800 bg-white border border-gray-300 rounded-xl shadow-sm hover:bg-gray-100"
+                    className="flex items-center justify-center h-8 text-gray-800 bg-white border border-gray-300 rounded-xl shadow-sm hover:bg-gray-100"
+                    onClick={() => onSuggestionClick(task)}
                 >
                     {task}
                 </button>
             ))}
         </div>
-
     );
 };
 
-export default Suggesstions;
+export default Suggestions;

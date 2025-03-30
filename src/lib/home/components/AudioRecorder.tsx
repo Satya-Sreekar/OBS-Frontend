@@ -77,7 +77,7 @@ const AudioRecorder: React.FC<AudioRecorderProps> = ({ onRecordingComplete , onT
                 }`}
                 onClick={toggleRecording}
             >
-                <FaMicrophone className={`text-gray-500 ${isRecording ? "text-white" : "text-gray-500"}`} />
+                <FaMicrophone className={`text-gray-800 ${isRecording ? "text-white" : "text-gray-500"}`} />
             </div>
 
             {recordingError && <p className="text-red-500">{recordingError}</p>}

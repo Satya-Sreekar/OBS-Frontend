@@ -9,9 +9,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #e1dcdc;
 
 
   font-synthesis: none;
@@ -81,14 +81,16 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #000000;
+  background-color: #2913b8;
   cursor: pointer;
   transition: border-color 0.25s;
+  accent-color: #9293ac;
 }
 button:hover {
   border-color: #646cff;
+  
 }
-button:focus,
+button:focus ,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }

@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import './RegisterScreen.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import "./RegisterScreen.css"; // Import the CSS file
 
 const RegisterScreen: React.FC = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   });
-
+  const [rememberMe, setRememberMe] = useState(false);
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle registration logic here
-    console.log('Registration attempt:', formData);
+    console.log("Registration attempt:", formData);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,101 +27,103 @@ const RegisterScreen: React.FC = () => {
       [e.target.name]: e.target.value,
     });
   };
+  const handleCheckboxChange = () => {
+    console.log("Checkbox clicked" + rememberMe);
+    setRememberMe(!rememberMe);
+  };
 
   return (
     <div className="register-container">
-      <div className="register-content">
+      <Card className="register-card">
         <div className="register-header">
-          <h1>Create Account</h1>
-          <p>Join us to get started</p>
+          <h1 className="register-title">Create Account</h1>
+          <p className="register-subtitle">Join us to get started</p>
         </div>
-        
-        <form onSubmit={handleSubmit} className="register-form">
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="firstName">First Name</label>
-              <input
+
+        <form onSubmit={handleSubmit}>
+          <div className="register-name-fields">
+            <div className="register-input-group">
+              <label>First Name</label>
+              <Input
                 type="text"
-                id="firstName"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
-                placeholder="Enter first name"
                 required
               />
             </div>
-
-            <div className="form-group">
-              <label htmlFor="lastName">Last Name</label>
-              <input
+            <div className="register-input-group">
+              <label>Last Name</label>
+              <Input
                 type="text"
-                id="lastName"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
-                placeholder="Enter last name"
                 required
               />
             </div>
           </div>
 
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
+          <div className="register-input-group">
+            <label>Email</label>
+            <Input
               type="email"
-              id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Enter your email"
               required
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
+          <div className="register-input-group">
+            <label>Password</label>
+            <Input
               type="password"
-              id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder="Create a password"
               required
             />
           </div>
 
-          <div className="form-group">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input
+          <div className="register-input-group">
+            <label>Confirm Password</label>
+            <Input
               type="password"
-              id="confirmPassword"
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
-              placeholder="Confirm your password"
               required
             />
           </div>
 
-          <div className="terms">
-            <label className="terms-checkbox">
-              <input type="checkbox" required />
-              <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
-            </label>
+          <div className="register-checkbox">
+            <input type="checkbox" className="mr-2" onChange={handleCheckboxChange} />
+            <span>
+              I agree to the <a href="#">Terms of Service</a> and{" "}
+              <a href="#">Privacy Policy</a>
+            </span>
           </div>
 
-          <button type="submit" className="register-button">
+          <Button type="submit" className="register-button">
             Create Account
-          </button>
+          </Button>
 
-          <div className="login-link">
-            <p>Already have an account? <span onClick={() => navigate('/login')}>Sign in</span></p>
+          <div className="register-footer">
+            <p>
+              Already have an account?{" "}
+              <span
+                onClick={() => navigate("/login")}
+                className="register-link"
+              >
+                Sign in
+              </span>
+            </p>
           </div>
         </form>
-      </div>
+      </Card>
     </div>
   );
 };
 
-export default RegisterScreen; 
+export default RegisterScreen;
