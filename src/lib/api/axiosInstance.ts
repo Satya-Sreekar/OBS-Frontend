@@ -2,8 +2,8 @@ import axios from "axios";
 
 // Create an Axios instance
 const api = axios.create({
-//   baseURL:  "http://183.82.144.125:8000/",
-  baseURL:"http://127.0.0.1:8000/",
+  baseURL:  "http://183.82.144.125:8000/",
+//   baseURL:"http://127.0.0.1:8000/",
   headers: {
     "Content-Type": "application/json",
     "origin": "http://localhost:5173", // Adjust this to your frontend URL
