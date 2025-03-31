@@ -13,6 +13,6 @@ export default defineConfig({
   },
   server: {
     host: true, // allow external access
-    allowedHosts: ['demo.satyasreekar.in'],
+    allowedHosts: ['demo.satyasreekar.in','http://ec2-34-195-0-32.compute-1.amazonaws.com'],
   },
 })
