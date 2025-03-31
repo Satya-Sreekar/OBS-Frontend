@@ -80,7 +80,7 @@ const AudioRecorder: React.FC<AudioRecorderProps> = ({ onRecordingComplete , onT
                 <FaMicrophone className={`text-gray-800 ${isRecording ? "text-white" : "text-gray-500"}`} />
             </div>
 
-            {recordingError && <p className="text-red-500">{recordingError}</p>}
+            {/* {recordingError && <p className="text-red-500">{recordingError}</p>}
 
             {audioUrl && !isRecording && (
                 <div className="mt-4">
@@ -95,7 +95,7 @@ const AudioRecorder: React.FC<AudioRecorderProps> = ({ onRecordingComplete , onT
                         </a>
                     </div>
                 </div>
-            )}
+            )} */}
 
            
         </div>
