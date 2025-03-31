@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ['ec2-34-195-0-32.compute-1.amazonaws.com'],
+    allowedHosts: ['https://obs.satyasreekar.in'],
     port: 80
   }
 });
