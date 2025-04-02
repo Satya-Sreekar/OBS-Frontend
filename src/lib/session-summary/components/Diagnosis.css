@@ -1,0 +1,30 @@
+.diagnosis-card {
+    width: 65vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .subtitle {
+    font-weight: normal;
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .content {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 16px;
+    align-content: start;
+  }
+  

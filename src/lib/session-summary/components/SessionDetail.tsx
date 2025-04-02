@@ -4,14 +4,19 @@ import Logo from "@/assets/LogoSmall.png";
 import ProfileImage from "@/assets/pl-image.png";
 const SessionDetail: React.FC = () => {
     return (
-        <div>
+        <div className="white-container ">
             <div className="header">
                 <div className="title-time">
-                    <div className="logo">
+                    <div className="session-logo">
                         <img src={Logo} alt="Theracuity Logo" />
-                        <h2>Theracuity</h2>
                     </div>
+                    <h2>Theracuity</h2>
+                    <span> | </span>
                     <span>9:31 PM</span>
+                </div>
+                <div className="button-container">
+                    <button className="outlined-button">Edit Note</button>
+                    <button className="normal-button">Approve</button>
                 </div>
             </div>
 
@@ -24,10 +29,7 @@ const SessionDetail: React.FC = () => {
                     </div>
                     <div className="column">
                         <span className="label">Name</span>
-                        <div className="profile">
-                            
-                            <span>John Doe</span>
-                        </div>
+                        <span>John Doe</span>
                     </div>
                     <div className="column">
                         <span className="label">Gender</span>
@@ -46,12 +48,12 @@ const SessionDetail: React.FC = () => {
                 <hr />
 
                 <div className="note-row">
+                    <div className="profile-column">
+                        <img src={ProfileImage} alt="Daniel Ryan" />
+                    </div>
                     <div className="column">
                         <span className="label">Provider(s)</span>
-                        <div className="profile">
-                            <img src={ProfileImage} alt="Daniel Ryan" />
-                            <span>Daniel Ryan</span>
-                        </div>
+                        <span>Daniel Ryan</span>
                     </div>
                     <div className="column">
                         <span className="label">Date of Session</span>
@@ -68,10 +70,7 @@ const SessionDetail: React.FC = () => {
                 </div>
             </div>
 
-            <div className="actions">
-                <button className="edit-btn">Edit Note</button>
-                <button className="approve-btn">Approve</button>
-            </div>
+            
         </div>
     );
 };

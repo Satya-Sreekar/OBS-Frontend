@@ -1,0 +1,50 @@
+.mood-status-container {
+    max-width: 70vw;
+    width: 65vw;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    text-align: left;
+  }
+  
+  .mood-status-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .mood-status-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  .mood-status-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .mood-status-item:last-child {
+    border-bottom: none;
+  }
+  
+  .label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .value {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .focus-area {
+    grid-column: span 2;
+  }
+  

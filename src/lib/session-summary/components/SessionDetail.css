@@ -1,40 +1,72 @@
+.white-container {
+  width: 70vw;
+  min-height: 100px;
+
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+
 .progress-note {
     /* max-width: 600px; */
     margin: auto;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-family: Arial, sans-serif;
   }
+
+  /* Headers */
   
   .header {
     display: flex;
     align-items: center;
+    
     gap: 10px;
   }
   .logo{
     display: flex;
-    align-items: start; 
-    justify-content: flex-start;
+    padding: 8px;
     
   }
-  .logo h2{
-    padding-top: 8px;
-    padding-left: 8px;
-  }
-  
-  .logo img {
+  .session-logo img {
     width: 60px;
-    height: 60px;
   }
   
   .title-time {
     flex: 1;
+    width: 100px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
+  .button-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between elements */
+}
+
+.outlined-button {
+    padding: 8px;
+    border: 1px solid grey;
+    background: transparent;
+    cursor: pointer;
+    color: #555;
+}
+
+.normal-button {
+    padding: 8px ;
+    padding-inline: 24px;
+    background: transparent;
+    color: green;
+    border: 1px solid green;
+    cursor: pointer;
+}
+
   
   p {
     font-size: 16px;
@@ -42,9 +74,10 @@
   }
   
   .note-card {
-    background: #f8f9fa;
+    background: #f8fbff;
     padding: 15px;
     border-radius: 8px;
+    margin: 24px;
   }
   
   .note-row {
@@ -52,6 +85,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    padding-top: 20px;
   }
   
   .column {
@@ -61,9 +95,7 @@
   }
   
  
-  .profile-column {
-    
-  }
+
   .profile-column img {
     width: 40px;
     height: 40px;

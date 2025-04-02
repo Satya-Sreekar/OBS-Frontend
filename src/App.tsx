@@ -3,7 +3,7 @@ import LoginScreen from './lib/auth/LoginScreen';
 import RegisterScreen from './lib/auth/RegisterScreen';
 import './App.css';
 import ChatInterface from './lib/home/HomeScreen';
-import SessionSummary from './lib/session/SessionSummary';
+import SessionSummary from './lib/session-summary/SessionSummary';
 
 function App() {
   return (
