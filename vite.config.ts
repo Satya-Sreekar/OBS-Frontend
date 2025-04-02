@@ -13,6 +13,6 @@ export default defineConfig({
   },
   server: {
     allowedHosts: ['https://obs.satyasreekar.in'],
-    port: 80
+    port: 5173
   }
 });
