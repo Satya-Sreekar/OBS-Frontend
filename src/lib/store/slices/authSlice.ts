@@ -23,7 +23,7 @@ const initialState: AuthState = {
 
 // Async Thunk for Login
 export const loginUser = createAsyncThunk(
-  "auth/login",
+  "/token",
   async (credentials: { email: string; password: string }, { rejectWithValue }) => {
     try {
       const response = await login(credentials);
